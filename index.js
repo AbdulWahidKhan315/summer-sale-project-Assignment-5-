@@ -17,13 +17,6 @@ function getHeadingAndShow(headingId,showHeadingId){
 //add event listener....
 document.getElementById('card-1').addEventListener('click',function(){
     getHeadingAndShow('access1','show-heading');
-    // const heading = document.getElementById('access1').innerText;
-    // const showHeading = document.getElementById('show-heading');
-    // const p = document.createElement('p');
-    // const count = showHeading.childElementCount;
-    // p.innerHTML = `${count + 1}. ${heading}`;
-    // showHeading.appendChild(p);
-    //product price...
     const price1 = getMoney('price-1');
     //total price...
     const totalPrice = getMoney('total-price');
@@ -76,7 +69,7 @@ document.getElementById('card-3').addEventListener('click',function(){
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
-// card 3 event listener 
+// card 4 event listener 
 document.getElementById('card-4').addEventListener('click',function(){
     getHeadingAndShow('sports-back','show-heading');
 
@@ -90,6 +83,103 @@ document.getElementById('card-4').addEventListener('click',function(){
         const couponButton = document.getElementById('coupon-btn');
         couponButton.removeAttribute('disabled');
     }else if(totalPrice>=0){
+        const purchaseButton = document.getElementById('purchase-btn');
+        purchaseButton.removeAttribute('disabled');
+    }
+    document.getElementById('total-price').innerText = finalPrice;
+});
+// card 5 event listener 
+document.getElementById('card-5').addEventListener('click',function(){
+    getHeadingAndShow('full-jersey','show-heading');
+
+    //product price...
+    const price5 = getMoney('price-5');
+    //total price...
+    const totalPrice = getMoney('total-price');
+    const finalPrice = price5 + totalPrice;
+
+    if(finalPrice>=200){
+        const couponButton = document.getElementById('coupon-btn');
+        couponButton.removeAttribute('disabled');
+    }else if(totalPrice>=0){
+        const purchaseButton = document.getElementById('purchase-btn');
+        purchaseButton.removeAttribute('disabled');
+    }
+    document.getElementById('total-price').innerText = finalPrice;
+});
+// card 6 event listener 
+document.getElementById('card-6').addEventListener('click',function(){
+    getHeadingAndShow('sports-cates','show-heading');
+
+    //product price...
+    const price6 = getMoney('price-6');
+    //total price...
+    const totalPrice = getMoney('total-price');
+    const finalPrice = price6 + totalPrice;
+
+    if(finalPrice>=200){
+        const couponButton = document.getElementById('coupon-btn');
+        couponButton.removeAttribute('disabled');
+    }else if(totalPrice>=0){
+        const purchaseButton = document.getElementById('purchase-btn');
+        purchaseButton.removeAttribute('disabled');
+    }
+    document.getElementById('total-price').innerText = finalPrice;
+});
+// card 7 event listener 
+document.getElementById('card-7').addEventListener('click',function(){
+    getHeadingAndShow('single-relax','show-heading');
+
+    //product price...
+    const price7 = getMoney('price-7');
+    //total price...
+    const totalPrice = getMoney('total-price');
+    const finalPrice = price7 + totalPrice;
+
+    if(finalPrice>=200){
+        const couponButton = document.getElementById('coupon-btn');
+        couponButton.removeAttribute('disabled');
+    }else if(totalPrice>=0){
+        const purchaseButton = document.getElementById('purchase-btn');
+        purchaseButton.removeAttribute('disabled');
+    }
+    document.getElementById('total-price').innerText = finalPrice;
+});
+// card 8 event listener 
+document.getElementById('card-8').addEventListener('click',function(){
+    getHeadingAndShow('children-play','show-heading');
+
+    //product price...
+    const price8 = getMoney('price-8');
+    //total price...
+    const totalPrice = getMoney('total-price');
+    const finalPrice = price8 + totalPrice;
+
+    if(finalPrice>=200){
+        const couponButton = document.getElementById('coupon-btn');
+        couponButton.removeAttribute('disabled');
+    }
+    if(totalPrice>=0){
+        const purchaseButton = document.getElementById('purchase-btn');
+        purchaseButton.removeAttribute('disabled');
+    }
+    document.getElementById('total-price').innerText = finalPrice;
+});
+// card 9 event listener 
+document.getElementById('card-9').addEventListener('click',function(){
+    getHeadingAndShow('flexible-sofa','show-heading');
+
+    //product price...
+    const price9 = getMoney('price-9');
+    //total price...
+    const totalPrice = getMoney('total-price');
+    const finalPrice = price9 + totalPrice;
+
+    if(finalPrice>=200){
+        const couponButton = document.getElementById('coupon-btn');
+        couponButton.removeAttribute('disabled');
+    }
+    if(totalPrice>=0){
         const purchaseButton = document.getElementById('purchase-btn');
         purchaseButton.removeAttribute('disabled');
     }
