@@ -185,3 +185,26 @@ document.getElementById('card-9').addEventListener('click',function(){
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
+//add event listener for apply button...
+document.getElementById('coupon-btn').addEventListener('click',function(){
+    const couponString = document.getElementById('coupon-field');
+    const couponValue = couponString.value;
+    couponString.value = '';
+    if(couponValue === 'SELL200'){
+        const totalPrice = getMoney('total-price');
+        const discount = (totalPrice * 20)/100;
+        const previousDiscount = getMoney('discount');
+        const newDiscount = previousDiscount + discount;
+        const totalDiscount = newDiscount.toFixed(2);
+        document.getElementById('discount').innerText = totalDiscount;
+        //GRAND TOTAL...
+        const payAbleAmount = totalPrice - totalDiscount;
+        const previousGrandTotal = getMoney('grand-total');
+        const newGrandTotal = payAbleAmount + previousGrandTotal;
+        const totalGrandTotal = newGrandTotal.toFixed(2);
+        document.getElementById('grand-total').innerText = totalGrandTotal;
+
+    }else{
+        alert('Provide a valid coupon code');
+    }
+})
