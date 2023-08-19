@@ -23,11 +23,9 @@ document.getElementById('card-1').addEventListener('click',function(){
     
     const finalPrice = price1 + totalPrice;
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -42,11 +40,9 @@ document.getElementById('card-2').addEventListener('click',function(){
     const finalPrice = price2 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -61,11 +57,9 @@ document.getElementById('card-3').addEventListener('click',function(){
     const finalPrice = price3 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -80,11 +74,9 @@ document.getElementById('card-4').addEventListener('click',function(){
     const finalPrice = price4 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -99,11 +91,9 @@ document.getElementById('card-5').addEventListener('click',function(){
     const finalPrice = price5 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -118,11 +108,9 @@ document.getElementById('card-6').addEventListener('click',function(){
     const finalPrice = price6 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -137,11 +125,9 @@ document.getElementById('card-7').addEventListener('click',function(){
     const finalPrice = price7 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }else if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -156,12 +142,10 @@ document.getElementById('card-8').addEventListener('click',function(){
     const finalPrice = price8 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }
     if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -176,12 +160,10 @@ document.getElementById('card-9').addEventListener('click',function(){
     const finalPrice = price9 + totalPrice;
 
     if(finalPrice>=200){
-        const couponButton = document.getElementById('coupon-btn');
-        couponButton.removeAttribute('disabled');
+        document.getElementById('coupon-btn').removeAttribute('disabled');
     }
     if(totalPrice>=0){
-        const purchaseButton = document.getElementById('purchase-btn');
-        purchaseButton.removeAttribute('disabled');
+        document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
 });
@@ -207,4 +189,13 @@ document.getElementById('coupon-btn').addEventListener('click',function(){
     }else{
         alert('Provide a valid coupon code');
     }
-})
+});
+//add event listener fo GO HOME button...
+document.getElementById('go-home').addEventListener('click',function(){
+    document.getElementById('total-price').innerText = '00.00';
+    document.getElementById('discount').innerText = '00.00';
+    document.getElementById('grand-total').innerText = '00.00';
+    document.getElementById('show-heading').innerHTML = '';
+    document.getElementById('coupon-btn').setAttribute('disabled',true);
+    document.getElementById('purchase-btn').setAttribute('disabled',true);
+});
