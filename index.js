@@ -27,6 +27,7 @@ document.getElementById('card-1').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 //card 2 event listener....
 document.getElementById('card-2').addEventListener('click', function () {
@@ -43,6 +44,7 @@ document.getElementById('card-2').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 3 event listener 
 document.getElementById('card-3').addEventListener('click', function () {
@@ -59,6 +61,7 @@ document.getElementById('card-3').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 4 event listener 
 document.getElementById('card-4').addEventListener('click', function () {
@@ -75,6 +78,7 @@ document.getElementById('card-4').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 5 event listener 
 document.getElementById('card-5').addEventListener('click', function () {
@@ -91,6 +95,7 @@ document.getElementById('card-5').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 6 event listener 
 document.getElementById('card-6').addEventListener('click', function () {
@@ -107,6 +112,7 @@ document.getElementById('card-6').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 7 event listener 
 document.getElementById('card-7').addEventListener('click', function () {
@@ -123,6 +129,7 @@ document.getElementById('card-7').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 8 event listener 
 document.getElementById('card-8').addEventListener('click', function () {
@@ -140,6 +147,7 @@ document.getElementById('card-8').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 // card 9 event listener 
 document.getElementById('card-9').addEventListener('click', function () {
@@ -157,6 +165,7 @@ document.getElementById('card-9').addEventListener('click', function () {
         document.getElementById('purchase-btn').removeAttribute('disabled');
     }
     document.getElementById('total-price').innerText = finalPrice;
+    document.getElementById('grand-total').innerText = finalPrice;
 });
 //add event listener for apply button...
 document.getElementById('coupon-btn').addEventListener('click', function () {
@@ -172,9 +181,7 @@ document.getElementById('coupon-btn').addEventListener('click', function () {
         document.getElementById('discount').innerText = totalDiscount;
         //GRAND TOTAL...
         const payAbleAmount = totalPrice - totalDiscount;
-        const previousGrandTotal = getMoney('grand-total');
-        const newGrandTotal = payAbleAmount + previousGrandTotal;
-        const totalGrandTotal = newGrandTotal.toFixed(2);
+        const totalGrandTotal = payAbleAmount.toFixed(2);
         document.getElementById('grand-total').innerText = totalGrandTotal;
         this.setAttribute('disabled',true);
 
